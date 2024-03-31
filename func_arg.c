@@ -14,6 +14,7 @@ tree *func_arg(char **argv)
 	tree *list_inputs;
 	FILE *sourcecode;
 
+
 	list_inputs = NULL;
 	buf = NULL;
 	z = 0;
@@ -37,13 +38,20 @@ tree *func_arg(char **argv)
 		}
 		if (!(blank_check(buf)))
 		{
-		command = tokenaizer(buf);
+		command = tokenaizer(buf, sourcecode);
 		if (command == NULL)
 		{
 		free(buf);
+		fclose(sourcecode);
 		return (NULL);
 		}
-		maketree(&list_inputs, command);
+		list_inputs = maketree(&list_inputs, command);
+		if (list_inputs == NULL)
+		{
+			free(buf);
+			fclose(sourcecode);
+			return (NULL);
+		}
 
 		}
 	}

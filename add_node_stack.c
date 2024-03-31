@@ -26,6 +26,7 @@ void add_node_stack(stack_t **stack, unsigned int line_number)
 	if (*stack == NULL)
 	{
 		newnode->next = NULL;
+		newnode->prev = NULL;
 		*stack = newnode;
 
 	}
@@ -33,6 +34,8 @@ void add_node_stack(stack_t **stack, unsigned int line_number)
 	else
 	{
 		newnode->next = *(stack);
+		newnode->prev = NULL;
+		(*stack)->prev = newnode;
 		*(stack) = newnode;
 
 	}

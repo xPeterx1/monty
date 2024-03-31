@@ -47,11 +47,11 @@ typedef struct tree
 extern int line;
 tree * func_arg (char **argv);
 char *formatting(char *b);
-char **tokenaizer (char *string);
+char **tokenaizer (char *string, FILE *souce);
 int push_check (char *name_function);
 void print_tree(tree **stack);
 void add_node_stack(stack_t **stack, unsigned int line_number);
-char *maketree(tree **stack, char **command);
+tree *maketree(tree **stack, char **command);
 void print_stack(stack_t **stack, unsigned int line_number);
 int functions_execution(tree * command);
 int blank_check (char *buffer);
