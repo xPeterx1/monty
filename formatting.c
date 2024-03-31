@@ -1,9 +1,14 @@
 #include "monty.h"
+/**
+ * formatting - hy
+ * @b: e
+ * Return: 1
+*/
 char *formatting(char *b)
 {
 	int i, j;
 	char *new;
-	
+
 	if (b == NULL)
 	{
 	return (NULL);

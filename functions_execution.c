@@ -1,5 +1,9 @@
 #include "monty.h"
-
+/**
+ * functions_execution - t
+ * @command: hy
+ * Return: 1
+*/
 
 int functions_execution(tree *command)
 {
@@ -7,7 +11,11 @@ int functions_execution(tree *command)
 	int num;
 	int i;
 	tree *tmp;
-	int line;
+	instruction_t database[2] = {
+	{"push", add_node_stack},
+	{"pall", print_stack}
+	};
+	tmp = command;
 
 	i = 0;
 	if (command == NULL)
@@ -15,15 +23,9 @@ int functions_execution(tree *command)
 		return (-1);
 
 	}
-	instruction_t database[] = {{"push", add_node_stack},
-	{"pall", print_stack}};
-	tmp = command;
-	
-
 	num = sizeof(database) / sizeof(database[0]);
 	while (1)
 	{
-
 		while (!(strcmp(tmp->function_name, database[i].opcode)) && i < num)
 		{
 			database[i].f(&head, tmp->arg);
@@ -35,13 +37,11 @@ int functions_execution(tree *command)
 			}
 		}
 		i++;
-
 	if (i == num)
 	{
-	fprintf(stderr, "L%d: unknown instruction %s \n",tmp->line, tmp->function_name);
+	fprintf(stderr, "L%d: unknown instruction %s \n",
+	tmp->line, tmp->function_name);
 	return (-1);
 	}
-
 	}
-
 }

@@ -1,5 +1,9 @@
 #include "monty.h"
-
+/**
+ * tokenaizer - hy
+ * @string: h
+ * Return: 1
+*/
 char **tokenaizer(char *string)
 {
 	char *res1;
@@ -12,7 +16,7 @@ char **tokenaizer(char *string)
 	if (command == NULL)
 	{
 	fprintf(stderr, "Error: malloc failed");
-	exit (EXIT_FAILURE);
+	exit(EXIT_FAILURE);
 	}
 
 	res1 = strtok(string, " ");
@@ -24,13 +28,13 @@ char **tokenaizer(char *string)
 		if (res2 == NULL)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line);
-			exit (EXIT_FAILURE);
+			exit(EXIT_FAILURE);
 		}
 		res2 = formatting(res2);
 		if (arg_check(res2))
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line);
-			exit (EXIT_FAILURE);
+			exit(EXIT_FAILURE);
 		}
 		command[0] = res1;
 		command[1] = res2;

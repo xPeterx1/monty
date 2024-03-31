@@ -1,15 +1,15 @@
 #include "monty.h"
 /**
- * add_dnodeint_end - m
- * @head: h
- * @n: s
+ * maketree - m
+ * @stack: h
+ * @command: s
  * Return: 1
  **/
 char *maketree(tree **stack, char **command)
 {
 	tree *newnode;
 	tree *tmp;
-	
+
 
 	if (stack == NULL)
 		return (NULL);
@@ -17,7 +17,7 @@ char *maketree(tree **stack, char **command)
 	if (newnode == NULL)
 	{
 	fprintf(stderr, "Error: malloc failed");
-	exit (EXIT_FAILURE);
+	exit(EXIT_FAILURE);
 	}
 	newnode->function_name  = command[0];
 	if (command[1] !=  NULL)

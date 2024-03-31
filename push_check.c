@@ -1,5 +1,9 @@
 #include "monty.h"
-
+/**
+ * push_check - hy
+ * @name_function: 1
+ * Return: 1
+*/
 int push_check(char *name_function)
 {
 	#define true 1
@@ -24,7 +28,3 @@ int push_check(char *name_function)
 	return (false);
 
 }
-
-// strlen of arg
-//check of correctness of funname
-// make it universal

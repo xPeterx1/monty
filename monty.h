@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
+#include <unistd.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -39,7 +40,6 @@ typedef struct tree
 {
         char *function_name;
         int arg;
-        //int err;
         int line;
         struct tree *next;
 } tree;
@@ -56,4 +56,6 @@ void print_stack(stack_t **stack, unsigned int line_number);
 int functions_execution(tree * command);
 int blank_check (char *buffer);
 int arg_check(char *argument);
+void free_tree (tree *list);
+ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 #endif

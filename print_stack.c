@@ -1,7 +1,8 @@
 #include "monty.h"
 /**
- * print_dlistint - yes
- * @h: hellp
+ * print_stack - yes
+ * @stack: hellp
+ * @line_number: 1
  * Return: n
 */
 void print_stack(stack_t **stack, unsigned int line_number)

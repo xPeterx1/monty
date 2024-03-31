@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
- * print_dlistint - yes
- * @h: hellp
+ * print_tree - yes
+ * @stack: hellp
  * Return: n
 */
 void print_tree(tree **stack)

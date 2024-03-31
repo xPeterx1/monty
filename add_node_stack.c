@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * add_dnodeint - m
- * @head: h
- * @n: s
+ * add_node_stack - m
+ * @stack: h
+ * @line_number: s
  * Return: 1
  **/
 
