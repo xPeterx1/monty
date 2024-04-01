@@ -11,10 +11,11 @@ int functions_execution(tree *command)
 	int num;
 	int i;
 	tree *tmp;
-	instruction_t database[3] = {
+	instruction_t database[4] = {
 	{"push", add_node_stack},
 	{"pall", print_stack},
-	{"pint", print_top}
+	{"pint", print_top},
+	{"pop", pop}
 	};
 	tmp = command;
 

@@ -59,4 +59,5 @@ int arg_check(char *argument);
 void free_tree (tree *list);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 void print_top(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
 #endif
