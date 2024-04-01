@@ -22,10 +22,6 @@ char *formatting(char *b)
 	if (b[i - 1] != '\n')
 	{
 		new = malloc(sizeof(char) * (i + 1));
-		if (new == NULL)
-		{
-			return (NULL);
-		}
 		for (j = 0; j < i + 1; j++)
 	{
 		new[j] = b[j];
@@ -36,10 +32,6 @@ char *formatting(char *b)
 	}
 
 	new = malloc(sizeof(char) * i);
-	if (new == NULL)
-		{
-			return (NULL);
-		}
 	for (j = 0; j < i - 1; j++)
 	{
 		new[j] = b[j];

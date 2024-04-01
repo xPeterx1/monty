@@ -13,7 +13,7 @@ int arg_check(char *argument)
 	int lenght;
 
 
-	if (*argument == 0)
+	if (*argument == 0 || argument == NULL)
 	{
 		return (false);
 	}

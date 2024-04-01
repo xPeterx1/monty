@@ -5,7 +5,7 @@
  * @command: s
  * Return: 1
  **/
-tree *maketree(tree **stack, char **command)
+char *maketree(tree **stack, char **command)
 {
 	tree *newnode;
 	tree *tmp;
@@ -44,5 +44,5 @@ tree *maketree(tree **stack, char **command)
 			tmp = tmp->next;
 		}
 	}
-		return (newnode);
+		return (NULL);
 }
